@@ -72,8 +72,10 @@ e. Session dijaga menggunakan JWT
 
 ### **Tabel Users**
 - id (PK)  
-- username  
-- password_hash  
+- username
+- email  
+- password_hash
+- created_at
 
 ### **Tabel Contacts**
 - id (PK)  
@@ -82,14 +84,49 @@ e. Session dijaga menggunakan JWT
 - phone  
 - email  
 - address  
-- category (opsional)
+- category
+- created_at
 
 **Relasi:** Users **1..N** Contacts
+
+
 
 ---
 
 ## 7. Struktur Detail Tabel Database
-*(Belum diisi di teks asli.)*
+Berikut codingan Markdown-nya dalam bentuk code block agar bisa langsung kamu copy-paste:
+
+
+---
+
+✅ Markdown Code Block (Struktur Tabel)
+
+# Struktur Tabel Database
+
+## Tabel: `users`
+
+| Nama Kolom     | Tipe Data                | Keterangan                      |
+|----------------|---------------------------|----------------------------------|
+| id             | INTEGER                   | Primary Key, Auto Increment      |
+| username       | VARCHAR(50)               | Unique, Not Null                 |
+| email          | VARCHAR(100)              | Unique, Not Null                 |
+| password_hash  | VARCHAR(255)              | Not Null                         |
+| created_at     | TIMESTAMP (TZ)            | Default: CURRENT_TIMESTAMP       |
+
+---
+
+## Tabel: `contacts`
+
+| Nama Kolom | Tipe Data         | Keterangan                                    |
+|------------|--------------------|-----------------------------------------------|
+| id         | INTEGER            | Primary Key, Auto Increment                    |
+| user_id    | INTEGER            | Foreign Key → users.id, Not Null               |
+| name       | VARCHAR(100)       | Not Null                                      |
+| phone      | VARCHAR(50)        | Opsional                                       |
+| email      | VARCHAR(100)       | Opsional                                       |
+| address    | TEXT               | Opsional                                       |
+| category   | VARCHAR(50)        | Opsional                                       |
+| created_at | TIMESTAMP (TZ)     | Default: CURRENT_TIMESTAMP                    |
 
 ---
 
