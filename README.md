@@ -89,7 +89,7 @@ e. Session dijaga menggunakan JWT
 
 **Relasi:** Users **1..N** Contacts
 
-![ERD](Kelompok-1-Aplikasi-Buku-Alamat/images/ERD.png)
+![Entity Relationship Diagram](images/ERD.png)
 
 ---
 
