@@ -128,6 +128,53 @@ Kelompok-1-Aplikasi-Buku-Alamat/ ├── app.py ├── database.py ├─�
 ### **10.2 Langkah Instalasi**
 
 #### **1. Clone Repository**
-git clone https://github.com/manikadityaputra-250030722/Kelompok-1-Aplikasi-Buku-Alamat.git
+git clone 
+```sh
+https://github.com/manikadityaputra-250030722/Kelompok-1-Aplikasi-Buku-Alamat.git
+```
+
 ```sh
 cd buku-alamat-fastapi
+```
+#### **2. Buat Virtual Environment**
+- Windows
+```sh
+python -m venv venv
+venv\Scripts\activate
+```
+
+
+- Linux / macOS
+```sh
+python -m venv venv
+source venv/bin/activate
+```
+
+### **3. Install Dependensi**
+```sh
+pip install -r requirements.txt
+```
+
+### **4. Konfigurasi Database (database.py)**
+```sh
+SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://username:password@localhost/buku_alamat"
+```
+
+### **5. Menjalankan Server FastAPI**
+```sh
+uvicorn app:app --reload
+```
+- Akses dari perangkat lain:
+```sh
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
+```
+### **6. Akses Aplikasi**
+
+- Lokal:
+```sh
+http://127.0.0.1:8000/
+```
+- Perangkat lain:
+```sh
+http://IP_LAPTOP:8000/
+```
