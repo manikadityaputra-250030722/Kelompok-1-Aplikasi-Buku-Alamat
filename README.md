@@ -128,6 +128,6 @@ Kelompok-1-Aplikasi-Buku-Alamat/ ├── app.py ├── database.py ├─�
 ### **10.2 Langkah Instalasi**
 
 #### **1. Clone Repository**
-```sh
 git clone https://github.com/manikadityaputra-250030722/Kelompok-1-Aplikasi-Buku-Alamat.git
+```sh
 cd buku-alamat-fastapi
