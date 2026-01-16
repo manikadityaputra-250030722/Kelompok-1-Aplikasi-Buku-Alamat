@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buku Alamat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1 class="logo">Buku<span>Alamat</span></h1>
+      <p class="tagline">Kelola kontak dengan rapi.</p>
+    </aside>
 
+    <main class="main">
+      <header class="topbar">
+        <h2 class="page-title">Dashboard Kontak</h2>
+        <span class="badge">FastAPI</span>
+      </header>
+
+      <!-- AUTH -->
+      <section id="auth-section" class="card-grid">
+        <div class="card">
+          <h3>Registrasi</h3>
+          <form id="register-form" class="form">
+            <label>Username
+              <input type="text" id="reg-username" required />
+            </label>
+            <label>Email
+              <input type="email" id="reg-email" required />
+            </label>
+            <label>Password
+              <input type="password" id="reg-password" minlength="8" required />
+            </label>
+            <button type="submit" class="btn primary">Daftar</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Login</h3>
+          <form id="login-form" class="form">
+            <label>Username
+              <input type="text" id="login-username" required />
+            </label>
+            <label>Password
+              <input type="password" id="login-password" required />
+            </label>
+            <button type="submit" class="btn secondary">Login</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- USER AREA -->
+      <section id="user-section" class="hidden">
+        <div class="card user-header">
+          <div>
+            <p class="welcome">Selamat datang, <span id="current-user"></span></p>
+            <p class="subtext">Kelola daftar kontak di bawah ini.</p>
+          </div>
+          <button id="logout-btn" class="btn danger">Logout</button>
+        </div>
+
+        <div class="card">
+          <h3>Tambah Kontak</h3>
+          <form id="contact-form" class="form form-grid">
+            <input type="text" id="c-name" placeholder="Nama*" required />
+            <input type="text" id="c-phone" placeholder="Telepon" />
+            <input type="email" id="c-email" placeholder="Email" />
+            <input type="text" id="c-address" placeholder="Alamat" />
+            <input type="text" id="c-category" placeholder="Kategori (Keluarga, Teman, Kerja)" />
+            <button type="submit" class="btn primary full">Simpan Kontak</button>
+          </form>
+        </div>
+
+        <!-- SEARCH & FILTER -->
+        <div class="card">
+          <h3>Pencarian & Filter</h3>
+          <form id="filter-form" class="form form-grid">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Cari nama / email / alamat"
+            />
+            <select id="category-select">
+              <option value="">Semua kategori</option>
+              <option value="Keluarga">Keluarga</option>
+              <option value="Teman">Teman</option>
+              <option value="Kerja">Kerja</option>
+            </select>
+            <button type="submit" class="btn secondary">Terapkan</button>
+            <button id="clear-filter-btn" type="button" class="btn ghost">
+              Reset
+            </button>
+          </form>
+        </div>
+
+        <div class="card table-card">
+          <div class="table-header">
+            <h3>Daftar Kontak</h3>
+            <button id="reload-btn" class="btn ghost">Muat Ulang</button>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Telepon</th>
+                  <th>Email</th>
+                  <th>Alamat</th>
+                  <th>Kategori</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="contacts-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+  </html>
