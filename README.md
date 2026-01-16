@@ -115,3 +115,19 @@ e. Session dijaga menggunakan JWT
 
 ## 9. Struktur Folder
 Kelompok-1-Aplikasi-Buku-Alamat/ ├── app.py ├── database.py ├── models.py ├── schemas.py ├── auth.py ├── requirements.txt ├── static/ │   ├── index.html │   ├── styles.css │   └── main.js ├── images/ │   └── ERD.png
+
+---
+
+## 10. Cara Instalasi dan Menjalankan Aplikasi
+
+### **10.1 Prasyarat**
+- Python 3.7+  
+- MySQL Server  
+- Database sudah dibuat  
+
+### **10.2 Langkah Instalasi**
+
+#### **1. Clone Repository**
+```sh
+git clone https://github.com/manikadityaputra-250030722/Kelompok-1-Aplikasi-Buku-Alamat.git
+cd buku-alamat-fastapi
