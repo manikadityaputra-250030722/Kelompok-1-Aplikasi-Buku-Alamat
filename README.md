@@ -94,11 +94,11 @@ MySQL menyimpan tabel User (username, email, password_hash) dan Contact
 kode Python dan query SQL ke MySQL.
 
 3. Proses Bisnis
-1. Pengguna melakukan registrasi.
-2. Pengguna login dan mendapatkan JWT token.
-3. Pengguna dapat membuat, melihat, mengedit, menghapus kontak.
-4. Pengguna dapat mencari atau mengelompokkan kontak.
-5. Sistem menjaga session menggunakan JWT.
+a. Pengguna melakukan registrasi.
+b. Pengguna login dan mendapatkan JWT token.
+c. Pengguna dapat membuat, melihat, mengedit, menghapus kontak.
+d. Pengguna dapat mencari atau mengelompokkan kontak.
+e. Sistem menjaga session menggunakan JWT.
 
 
 4. ERD
