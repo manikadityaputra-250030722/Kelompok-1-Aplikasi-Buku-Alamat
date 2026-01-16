@@ -89,19 +89,11 @@ e. Session dijaga menggunakan JWT
 
 **Relasi:** Users **1..N** Contacts
 
-
+![ERD](Kelompok-1-Aplikasi-Buku-Alamat/images/ERD.png)
 
 ---
 
 ## 7. Struktur Detail Tabel Database
-Berikut codingan Markdown-nya dalam bentuk code block agar bisa langsung kamu copy-paste:
-
-
----
-
-✅ Markdown Code Block (Struktur Tabel)
-
-# Struktur Tabel Database
 
 ## Tabel: `users`
 
