@@ -114,3 +114,4 @@ e. Session dijaga menggunakan JWT
 ---
 
 ## 9. Struktur Folder
+Kelompok-1-Aplikasi-Buku-Alamat/ ├── app.py ├── database.py ├── models.py ├── schemas.py ├── auth.py ├── requirements.txt ├── static/ │   ├── index.html │   ├── styles.css │   └── main.js ├── images/ │   └── ERD.png
